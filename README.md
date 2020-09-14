@@ -20,4 +20,4 @@ https://url.of.serverless.function/dev/rss?page=https://www.hse.ie/eng/about/who
 
 LICENSE Apache-2.0
 
-Copyright Conor O'Neill 2018, conor@conoroneill.com
+Copyright Conor O'Neill 2020, conor@conoroneill.com

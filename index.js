@@ -33,9 +33,12 @@ module.exports.check = (event, context, callback) => {
         if (typeof img === 'undefined' || img === null || img === "https://www.hse.ie") img = "https://www.hse.ie/MicroSiteV3/images/banners/hselogo.png";
         if (link.indexOf(sectionURL) > -1) {
           var title = $(this).find("h3").text();
+          if (typeof title === 'undefined' || title === null) title = "No Title Found";
           var summary = $(this).find("p").text();
+          if (typeof summary === 'undefined' || summary === null) summary = "No Summary Found";
           var description = '<img src="' + img + '" alt="' + title + '" /> ' + summary;
           var articleDate = new Date($(this).find("time").attr("datetime"));
+          if (typeof articleDate === 'undefined' || articleDate === null) articleDate = new Date();
           feed.item({
             title: title,
             description: description,
